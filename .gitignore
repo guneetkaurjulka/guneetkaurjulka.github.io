@@ -1,0 +1,6 @@
+# Source documents (CV, cover letter, recommendations) — never publish
+samples/
+_source/
+# Local tooling
+.claude/
+.DS_Store
