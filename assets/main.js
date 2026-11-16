@@ -49,7 +49,7 @@
 (function () {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce || !('IntersectionObserver' in window)) return;
-  var targets = document.querySelectorAll('.section-head, .comp, .role, .quote, .beyond, .pillars li, .edu-card, .tools, .contact-card');
+  var targets = document.querySelectorAll('.section-head, .comp, .role, .quote, .beyond, .pillars li, .edu-card, .tools, .contact-card, .article, .newsletters');
   document.documentElement.classList.add('js-reveal');
   var obs = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
