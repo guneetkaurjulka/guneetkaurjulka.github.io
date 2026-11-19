@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-SG">
+<html lang="en-SG" data-theme="sepia">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,14 +17,16 @@
 <meta property="og:locale" content="en_SG">
 <meta name="twitter:card" content="summary">
 
-<meta name="theme-color" content="#0F5C52">
+<meta name="theme-color" content="#285A4A">
 
-<!-- Apply the saved theme before first paint, so there is no flash of the wrong background. -->
+<!-- Sepia is the default (set on <html> above). A visitor's saved choice is applied
+     before first paint, so there is no flash of the wrong background. -->
 <script>
   try {
     var t = localStorage.getItem('theme');
-    if (t === 'dark' || t === 'sepia') document.documentElement.dataset.theme = t;
-  } catch (e) { /* storage unavailable (private mode): stay on light */ }
+    if (t === 'light') delete document.documentElement.dataset.theme;
+    else if (t === 'dark') document.documentElement.dataset.theme = t;
+  } catch (e) { /* storage unavailable (private mode): stay on sepia */ }
 </script>
 
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -121,7 +123,7 @@
           <!-- Profile photo: paste a hosted image URL into data-photo (e.g. the LinkedIn
                photo's "Copy image address"). Nothing is stored in this repo. If the URL
                is empty, expired or blocked, the GK monogram shows instead. -->
-          <span class="photo" data-photo="">
+          <span class="photo" data-photo="https://www.evalueserve.com/wp-content/uploads/2023/10/Guneet_Julka_profile-300x300.jpg">
             <span class="photo-mono" aria-hidden="true">GK</span>
           </span>
           <div>

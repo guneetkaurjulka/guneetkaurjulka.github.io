@@ -1,6 +1,6 @@
 /* Guneet Kaur Julka · portfolio behaviour */
 
-/* ── theme switch: light (default) · sepia · dark, saved per visitor ── */
+/* ── theme switch: light · sepia (default) · dark, saved per visitor ── */
 (function () {
   var html = document.documentElement;
   var THEMES = ['light', 'sepia', 'dark'];
@@ -17,7 +17,7 @@
 
   var stored = null;
   try { stored = localStorage.getItem('theme'); } catch (e) { /* no-op */ }
-  apply(THEMES.indexOf(stored) > -1 ? stored : 'light');
+  apply(THEMES.indexOf(stored) > -1 ? stored : 'sepia');
 
   inputs.forEach(function (i) {
     i.addEventListener('change', function () {

@@ -2,8 +2,8 @@
    Guneet Kaur Julka · portfolio
    Identity: jade, coral and ochre drawn from Singapore's Peranakan
    tiles, an editorial serif (Fraunces) over a clean sans (Manrope).
-   Three themes (light · sepia · dark) via html[data-theme];
-   light is the default and carries no attribute.
+   Three themes via html[data-theme]: sepia is the default (set in the
+   markup); light is the base palette in :root and carries no attribute.
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
